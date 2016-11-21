@@ -11,3 +11,386 @@ Tags:
 Text Domain:
 */
 
+body {
+    position: relative;
+    background-color: #21201f;
+    background-image: url("theme-files/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff7ee;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    min-width: 320px;
+}
+
+#sidebar {
+    background-image: url("theme-files/sidebar.png");
+    background-position: left top;
+    background-repeat: repeat-y;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 300px;
+    z-index: 100;
+    overflow-y: auto;
+    box-shadow: 0px 0px 5px 2px #0c0c0c;
+    -moz-box-shadow: 0px 0px 5px 2px #0c0c0c;
+    -webkit-box-shadow: 0px 0px 5px 2px #0c0c0c;
+}
+
+
+#content {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    padding-left: 300px;
+    z-index: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+/**
+ *  2. Header
+ * ===========
+ */
+
+#header img {
+    margin: 50px 0 20px 39px;
+}
+
+#mobile-top {
+    display: none;
+    position: fixed;
+    padding: 8px;
+    margin: 0;
+    z-index: -200;
+}
+
+#mobile-top img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+/**
+ *  3. Navigation
+ * ===============
+ */
+
+.main-navigation {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 41px 0 40px;
+}
+
+.main-navigation li {
+    margin: 8px 0;
+    border-bottom: 1px dotted #807B77;
+}
+
+.main-navigation li:hover {
+    background-color: rgba(255,247,238,0.2);
+}
+
+.main-navigation a {
+    color: #fff7ee;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    color: #fff7ee;
+}
+
+
+/**
+ *  4. Sidebar Content
+ * ====================
+ */
+
+#so-me {
+    margin: 40px;
+    text-align: center;
+}
+
+#so-me a img {
+    width: 30px;
+    height: 30px;
+}
+
+#side-footer {
+    margin: 40px;
+    font-size: 0.8em;
+    color: #666666;
+}
+
+
+/**
+ *  5. Content
+ * ============
+ */
+
+/* Body Style */
+
+.body-text {
+    padding: 120px 50px;
+    width: 720px;
+    #border: 1px solid #ff0000;
+}
+
+.panel {
+    display: inline-block;
+    background-color: #2e2c2b;
+    padding: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 320px;
+}
+
+.body-text h1 {
+    margin: 0 0 70px 0;
+    text-align: right;
+    font-family: 'Tangerine', serif;
+    font-weight: 400;
+    font-size: 85px;
+}
+
+.body-text h2 {
+    margin: 40px 0 20px 0;
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.body-text p {
+    width: 90%;
+    text-align: justify;
+}
+
+.body-text ul {
+    width: 83%;
+    padding-left: 7%;
+    text-align: justify;
+}
+
+.body-text a {
+    color: #fff7ee;
+    text-decoration: underline;
+}
+
+.body-text a:hover {
+    color: #fff7ee;
+    text-decoration: underline;
+}
+
+.body-text .email {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+
+/* Academic */
+
+.entry {
+    margin: 0 0 20px 0;
+}
+
+.entry h5 {
+    width: 90%;
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.entry h5 a {
+    color: #ffe7cc;
+    text-decoration: none;
+}
+
+.entry h5 a:hover {
+    color: #ffe7cc;
+    text-decoration: underline;
+}
+
+.entry p {
+    margin: 2px 0 2px 0;
+    font-size: 13px;
+}
+
+.entry p em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.entry p.details {
+    color: #b3ada7;
+}
+
+.entry p.entry-meta {
+    font-size: 11px;
+    text-align: right;
+}
+
+.entry p.entry-meta span {
+    margin-left: 20px;
+}
+
+.entry p.entry-meta img {
+    vertical-align: bottom;
+    margin: 0 2px 0 0;
+}
+
+.entry p.entry-meta a {
+    color: #fff7ee;
+    text-decoration: underline;
+}
+
+.entry p.entry-meta a:hover {
+    color: #ffe7cc;
+    text-decoration: underline;
+}
+
+/* Book Style */
+
+.book {
+    background-image: url("../images/book.jpg");
+    background-position: 300px top;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+
+.book-text {
+    padding: 60px;
+    width: 670px;
+    color: #110900;
+}
+
+.book-text h1 {
+    font-family: 'Tangerine', serif;
+    font-weight: 400;
+    font-size: 75px;
+    text-shadow: 2px 2px 2px #aaa59e;
+    -moz-text-shadow: 2px 2px 2px #aaa59e;
+    -webkit-text-shadow: 2px 2px 2px #aaa59e;
+    margin: 0 0 30px 0;
+}
+
+.book-text p {
+    text-align: justify;
+}
+
+.dropcap {
+    float: left;
+    color: #994000;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 2px;
+    padding-right: 6px;
+    padding-left: 0;
+    font-family: Georgia;
+}
+
+
+/**
+ *  6. Media
+ * ==========
+ */
+
+.left-image {
+    display: table;
+    float: left;
+    margin: 0 20px 8px 0;
+}
+
+.left-image img {
+    box-shadow: 0px 0px 2px 1px #0c0c0c;
+    -moz-box-shadow: 0px 0px 2px 1px #0c0c0c;
+    -webkit-box-shadow: 0px 0px 2px 1px #0c0c0c;
+}
+
+.left-image figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    font-size: 11px;
+    color: #b3ada7;
+}
+
+
+/**
+ *  7. Mobile
+ * ===========
+ */
+
+@media screen and (max-width: 1150px) {
+
+    #sidebar {
+        left: -300px;
+        #z-index: -100;
+    }
+
+    #mobile-top {
+        display: block;
+        z-index: 200;
+    }
+
+    #content {
+        padding-left: 0;
+    }
+
+    .book {
+        background-position: left top;
+        background-attachment: fixed;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .book-text {
+        width: 100%;
+        padding: 50px 5%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    .body-text {
+        width: 100%;
+        padding: 40px 5%;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    .body-text h1 {
+        #font-size: 50px;
+    }
+
+    .body-text p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+
+    .body-text h1 {
+        font-size: 50px;
+    }
+
+}
+
+@media screen and (min-width: 1150px) {
+
+    #sidebar {
+        left: 0px !important;
+    }
+}
