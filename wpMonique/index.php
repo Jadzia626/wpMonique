@@ -15,9 +15,11 @@
     <!-- Index Template -->
 
     <!-- Begin Site Top -->
+<!--
     <div id="site-top">
         <h1>blog</h1>
     </div>
+-->
     <!-- End Site Top -->
 
     <!-- Begin Site Content -->

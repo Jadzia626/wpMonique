@@ -72,6 +72,32 @@ body {
     -webkit-box-sizing: border-box;
 }
 
+/* Clear Fix */
+
+.clear {
+    content: "";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.flex-box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -190,11 +216,135 @@ body {
     border: 1px solid #ff0000;
 }
 
+/**
+ *  5.1 Entry Content
+ * ===================
+ */
+
+/* Entry Header */
+
+.entry-header span.feature-caption {
+    margin: 0;
+    font-size: 0.8em;
+    color: #666666;
+}
+
+.entry-title {
+    margin: 40px 0 0 0;
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.entry-title a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Meta and Footer */
+
+.entry-meta,
+.entry-footer {
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.entry-meta,
+.entry-footer {
+    padding: 4px 0;
+}
+
+.entry-meta a,
+.entry-footer a {
+    color: #7c2699;
+    text-decoration: none;
+}
+
+.entry-meta a:hover,
+.entry-footer a:hover {
+    color: #7c2699;
+    text-decoration: underline;
+}
+
+/* Excerpt */
+
+.entry-list-feature .wp-post-image {
+    float: left;
+    margin: 0 16px 0 0;
+}
+
+.entry-excerpt p {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ *  5.1 Page
+ * ==========
+ */
+
 .page-header h2 {
     margin: 40px 0 20px 0;
     font-family: 'Courgette', cursive;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 2.2em;
+}
+
+/**
+ *  5.2 Single
+ * ============
+ */
+
+.single .entry-loop {
+    display: inline-block;
+    vertical-align: top;
+    width: 720px;
+    margin: 0;
+    padding: 0;
+}
+
+.single .post .entry-content,
+.single .post .entry-title,
+.single .post .entry-meta,
+.single .post .entry-footer {
+    width: 720px;
+}
+
+.single .post .entry-title {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 2.2em;
+}
+
+
+/**
+ *  5.3 Entry Extras
+ * ==================
+ */
+
+/* Reference List */
+
+.entry-content .references {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.entry-content .references li {
+    padding-left: 40px;
+    text-indent: -40px;
+    margin: 12px 0;
+}
+
+.entry-content span.post-info {
+    display: block;
+    color: #444444;
+    font-style: italic;
+    font-size: 0.9em;
+    background: #f3f3f3;
+    padding: 8px;
+    border: 1px solid #7c2699;
+    margin: 20px auto;
 }
 
 
@@ -217,236 +367,3 @@ body {
     font-size: 0.8em;
 }
 
-
-
-
-
-
-
-
-
-
-.body-text p {
-    width: 90%;
-    text-align: justify;
-}
-
-.body-text ul {
-    width: 83%;
-    padding-left: 7%;
-    text-align: justify;
-}
-
-.body-text a {
-    color: #fff7ee;
-    text-decoration: underline;
-}
-
-.body-text a:hover {
-    color: #fff7ee;
-    text-decoration: underline;
-}
-
-.body-text .email {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-}
-
-
-/* Academic */
-
-.entry {
-    margin: 0 0 20px 0;
-}
-
-.entry h5 {
-    width: 90%;
-    margin: 0 0 2px 0;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.entry h5 a {
-    color: #ffe7cc;
-    text-decoration: none;
-}
-
-.entry h5 a:hover {
-    color: #ffe7cc;
-    text-decoration: underline;
-}
-
-.entry p {
-    margin: 2px 0 2px 0;
-    font-size: 13px;
-}
-
-.entry p em {
-    font-style: normal;
-    font-weight: 700;
-}
-
-.entry p.details {
-    color: #b3ada7;
-}
-
-.entry p.entry-meta {
-    font-size: 11px;
-    text-align: right;
-}
-
-.entry p.entry-meta span {
-    margin-left: 20px;
-}
-
-.entry p.entry-meta img {
-    vertical-align: bottom;
-    margin: 0 2px 0 0;
-}
-
-.entry p.entry-meta a {
-    color: #fff7ee;
-    text-decoration: underline;
-}
-
-.entry p.entry-meta a:hover {
-    color: #ffe7cc;
-    text-decoration: underline;
-}
-
-/* Book Style */
-
-.book {
-    background-image: url("../images/book.jpg");
-    background-position: 300px top;
-    background-repeat: repeat-y;
-    background-attachment: fixed;
-}
-
-.book-text {
-    padding: 60px;
-    width: 670px;
-    color: #110900;
-}
-
-.book-text h1 {
-    font-family: 'Tangerine', serif;
-    font-weight: 400;
-    font-size: 75px;
-    text-shadow: 2px 2px 2px #aaa59e;
-    -moz-text-shadow: 2px 2px 2px #aaa59e;
-    -webkit-text-shadow: 2px 2px 2px #aaa59e;
-    margin: 0 0 30px 0;
-}
-
-.book-text p {
-    text-align: justify;
-}
-
-.dropcap {
-    float: left;
-    color: #994000;
-    font-size: 75px;
-    line-height: 60px;
-    padding-top: 2px;
-    padding-right: 6px;
-    padding-left: 0;
-    font-family: Georgia;
-}
-
-
-/**
- *  6. Media
- * ==========
- */
-
-.left-image {
-    display: table;
-    float: left;
-    margin: 0 20px 8px 0;
-}
-
-.left-image img {
-    box-shadow: 0px 0px 2px 1px #0c0c0c;
-    -moz-box-shadow: 0px 0px 2px 1px #0c0c0c;
-    -webkit-box-shadow: 0px 0px 2px 1px #0c0c0c;
-}
-
-.left-image figcaption {
-    display: table-caption;
-    caption-side: bottom;
-    font-size: 11px;
-    color: #b3ada7;
-}
-
-
-/**
- *  7. Mobile
- * ===========
- */
-
-@media screen and (max-width: 1150px) {
-
-    #sidebar {
-        left: -300px;
-        #z-index: -100;
-    }
-
-    #mobile-top {
-        display: block;
-        z-index: 200;
-    }
-
-    #content {
-        padding-left: 0;
-    }
-
-    .book {
-        background-position: left top;
-        background-attachment: fixed;
-    }
-
-}
-
-@media screen and (max-width: 800px) {
-
-    .book-text {
-        width: 100%;
-        padding: 50px 5%;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-    }
-
-    .body-text {
-        width: 100%;
-        padding: 40px 5%;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-    }
-
-    .body-text h1 {
-        #font-size: 50px;
-    }
-
-    .body-text p {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 500px) {
-
-
-    .body-text h1 {
-        font-size: 50px;
-    }
-
-}
-
-@media screen and (min-width: 1150px) {
-
-    #sidebar {
-        left: 0px !important;
-    }
-}
