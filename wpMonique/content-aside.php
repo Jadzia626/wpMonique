@@ -25,7 +25,7 @@
 
             echo '<span>';
                 echo '<img src="'.esc_url(get_template_directory_uri()).'/theme-files/icon_category.png">';
-                echo fRipleyGetCategoryList(get_the_ID());
+                echo wpMoniqueGetCategoryList(get_the_ID());
             echo '</span>';
 
             echo '<span>';

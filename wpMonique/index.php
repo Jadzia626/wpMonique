@@ -12,11 +12,16 @@
     get_header();
 ?>
 
+    <!-- Index Template -->
+
+    <!-- Begin Site Top -->
+    <div id="site-top">
+        <h1>blog</h1>
+    </div>
+    <!-- End Site Top -->
 
     <!-- Begin Site Content -->
-    <!-- Index Template -->
     <div id="site-content">
-        <?php //get_sidebar(); ?>
         <div class="entry-loop">
             <?php
                 // WP-Loop
@@ -44,11 +49,6 @@
                 }
             ?>
         </div>
-        <?php
-            if(!is_single()) {
-                get_sidebar('content');
-            }
-        ?>
     </div>
     <!-- End Site Content -->
 

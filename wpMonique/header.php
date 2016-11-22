@@ -31,10 +31,11 @@
 
 <body <?php body_class(); ?>>
 
+<!-- Begin Sidebar -->
 <div id="sidebar">
-    <header id="header">
+    <div id="sidebar-img">
         <img src="<?php echo $dirTheme; ?>/theme-files/veronica.png" width="240px">
-    </header>
+    </div>
     <div id="navbar" class="navbar">
         <nav id="site-navigation" class="navigation main-navigation" role="navigation">
             <?php wp_nav_menu(array("theme_location"=>"primary","menu_class"=>"nav-menu")); ?>
@@ -53,4 +54,8 @@
         Photo by Amy Davis Roth, &copy;2014<br>
     </div>
 </div>
+<!-- End Sidebar -->
+
+<!-- Begin Content -->
+<div id="content">
 

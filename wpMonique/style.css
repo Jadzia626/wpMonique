@@ -1,23 +1,45 @@
 /*
-Theme Name: wpMonique
-Theme URI: https://github.com/Jadzia626/wpMonique
-Author: Veronica Berglyd Olsen
-Author URI: http://vkbo.net/
-Description: Standard theme for vkbo.net
-Version: 0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
-Text Domain:
+    Theme Name: wpMonique
+    Theme URI: https://github.com/Jadzia626/wpMonique
+    Author: Veronica Berglyd Olsen
+    Author URI: http://vkbo.net/
+    Description: Standard theme for vkbo.net
+    Version: 0.1
+    License: Copyright Veronica K. Berglyd Olsen
 */
+
+/**
+ *  Content
+ * =========
+ *
+ *  1. Site
+ *  2. Sidebar
+ *  3. Navigation
+ *  4. Site Top
+ *  5. Site Content
+ */
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/**
+ *  1. Site
+ * =========
+ */
+
+html {
+}
 
 body {
     position: relative;
-    background-color: #21201f;
-    background-image: url("theme-files/background.jpg");
+    background: #ffe1bf;
+    background: -webkit-radial-gradient(circle, #ffe7cc, #ffe1bf); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, #ffe7cc, #ffe1bf);      /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(circle, #ffe7cc, #ffe1bf);    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle, #ffe7cc, #ffe1bf);         /* Standard syntax */
+    background-size: 100% 100%;
     background-attachment: fixed;
-    background-size: cover;
-    color: #fff7ee;
+    color: #21201f;
     font-size: 15px;
     font-family: Arial, sans-serif;
     min-width: 320px;
@@ -39,7 +61,6 @@ body {
     -webkit-box-shadow: 0px 0px 5px 2px #0c0c0c;
 }
 
-
 #content {
     position: relative;
     left: 0px;
@@ -52,13 +73,31 @@ body {
 }
 
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 /**
- *  2. Header
- * ===========
+ *  2. Sidebar
+ * ============
  */
 
-#header img {
+#sidebar-img img {
     margin: 50px 0 20px 39px;
+}
+
+#so-me {
+    margin: 40px;
+    text-align: center;
+}
+
+#so-me a img {
+    width: 30px;
+    height: 30px;
+}
+
+#side-footer {
+    margin: 40px;
+    font-size: 0.8em;
+    color: #777777;
 }
 
 #mobile-top {
@@ -74,6 +113,9 @@ body {
     height: 30px;
     margin: 0;
 }
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  3. Navigation
@@ -111,64 +153,78 @@ body {
 }
 
 
-/**
- *  4. Sidebar Content
- * ====================
- */
-
-#so-me {
-    margin: 40px;
-    text-align: center;
-}
-
-#so-me a img {
-    width: 30px;
-    height: 30px;
-}
-
-#side-footer {
-    margin: 40px;
-    font-size: 0.8em;
-    color: #666666;
-}
-
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
- *  5. Content
- * ============
+ *  4. Site Top
+ * =============
  */
 
-/* Body Style */
-
-.body-text {
-    padding: 120px 50px;
+#site-top {
+    padding: 80px 50px 10px 50px;
     width: 720px;
-    #border: 1px solid #ff0000;
+    border: 1px solid #ff0000;
 }
 
-.panel {
-    display: inline-block;
-    background-color: #2e2c2b;
-    padding: 20px;
-    margin-left: 40px;
-    margin-top: 40px;
-    width: 320px;
-}
-
-.body-text h1 {
-    margin: 0 0 70px 0;
+#site-top h1 {
+    margin: 0;
     text-align: right;
     font-family: 'Tangerine', serif;
     font-weight: 400;
     font-size: 85px;
 }
 
-.body-text h2 {
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/**
+ *  5. Site Content
+ * =================
+ */
+
+/* Body Style */
+
+#site-content {
+    padding: 10px 50px 50px 50px;
+    width: 720px;
+    border: 1px solid #ff0000;
+}
+
+.page-header h2 {
     margin: 40px 0 20px 0;
     font-family: 'Courgette', cursive;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 32px;
 }
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/**
+ *  5. Site Bottom
+ * ================
+ */
+
+#site-bottom {
+    padding: 10px 50px 50px 50px;
+    width: 720px;
+    border: 1px solid #ff0000;
+}
+
+#copyright-text {
+    color: #999999;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
 
 .body-text p {
     width: 90%;

@@ -14,7 +14,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php
         if(!is_front_page()) {
-            the_title('<header class="page-header"><h1 class="page-title">','</h1></header>');
+            the_title('<header class="page-header"><h2 class="page-title">','</h2></header>');
         }
     ?>
     <div class="entry-meta">

@@ -41,7 +41,7 @@
 
             echo '<span>';
                 echo '<img src="'.esc_url(get_template_directory_uri()).'/theme-files/icon_category.png">';
-                echo fRipleyGetCategoryList(get_the_ID());
+                echo wpMoniqueGetCategoryList(get_the_ID());
             echo '</span>';
 
             echo '<span>';
@@ -80,18 +80,6 @@
     ?>
     <?php
         if(is_single()) {
-
-            // Ads
-            $sAd = get_template_directory().'/ads/PostFooter.txt';
-            if(file_exists($sAd)) {
-                echo '<div class="ad-post-footer">';
-                if($cLang == 'no') {
-                    echo '<label>Reklame</label>';
-                } else {
-                    echo '<label>Advertisement</label>';
-                }
-                echo file_get_contents($sAd).'</div>';
-            }
 
             // Show Featured and Related Posts
             echo '<div class="entry-related">';
