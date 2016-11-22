@@ -12,11 +12,7 @@
 
 <!-- Begin Page Content Template -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php
-        if(!is_front_page()) {
-            the_title('<header class="page-header"><h2 class="page-title">','</h2></header>');
-        }
-    ?>
+    <?php the_title('<header class="page-header"><h1 class="page-title">','</h1></header>'); ?>
     <div class="entry-meta">
         <?php if($cLang == 'no') { ?>
             Oppdatert den <?php the_modified_date('j. F Y'); ?>

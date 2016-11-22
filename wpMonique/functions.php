@@ -204,9 +204,9 @@
 
         }
 
-        echo '<ul class="ripley-relatedsingle';
+        echo '<ul class="wpmonique-relatedsingle';
         if(count($aPosts) < 3) {
-            echo ' ripley-relatedleft';
+            echo ' wpmonique-relatedleft';
         } else {
             echo ' flex-box';
         }

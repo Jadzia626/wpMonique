@@ -14,14 +14,6 @@
 
     <!-- Index Template -->
 
-    <!-- Begin Site Top -->
-<!--
-    <div id="site-top">
-        <h1>blog</h1>
-    </div>
--->
-    <!-- End Site Top -->
-
     <!-- Begin Site Content -->
     <div id="site-content">
         <div class="entry-loop">
@@ -39,6 +31,10 @@
                         }
                         echo '<h1 class="page-title">'.get_search_query().'</h1>';
                         echo '</header>';
+                    } else {
+                        if(!is_single()) {
+                            echo '<h2 class="page-title">Latest Posts</h2>';
+                        }
                     }
 
                     while (have_posts()) {

@@ -18,11 +18,6 @@
     <header class="entry-header">
         <?php
             if(is_single()) {
-                if(has_post_thumbnail()) the_post_thumbnail(array(720,375));
-                $sFCaption = get_post(get_post_thumbnail_id())->post_excerpt;
-                if(!empty($sFCaption)) {
-                    echo '<span class="feature-caption">'.$sFCaption.'</span>';
-                }
                 the_title('<h1 class="entry-title">','</h1>');
             } else {
                 the_title('<h1 class="entry-title"><a href="'.esc_url(get_permalink()).'">','</a></h1>');
@@ -46,7 +41,15 @@
         ?>
     </div>
     <?php if(is_single()) { ?>
-        <div class="entry-content"><?php the_content(); ?></div>
+        <div class="entry-feature">
+            <?php
+                if(has_post_thumbnail()) the_post_thumbnail(array(720,375));
+                $sFCaption = get_post(get_post_thumbnail_id())->post_excerpt;
+                if(!empty($sFCaption)) {
+                    echo '<span class="feature-caption">'.$sFCaption.'</span>';
+                }
+            ?>
+        </div><div class="entry-content"><?php the_content(); ?></div>
         <?php
             if($cLang == 'no') {
                 echo get_the_tag_list('<footer class="entry-footer">Stikkord: ',', ','</footer>');
@@ -92,7 +95,7 @@
                 fSetPostViews(get_the_ID());
             }
         } else {
-            echo '<div class="clear"></div>';
+            echo '<div class="entry-spacer clear"></div>';
         }
     ?>
 
