@@ -23,7 +23,7 @@
                     }
                 }
 
-                echo '<h2 class="page-title">Latest Posts</h2>';
+                echo '<h2>Latest Posts</h2>';
 
                 $aGet = array(
                     'posts_per_page'   => 3,

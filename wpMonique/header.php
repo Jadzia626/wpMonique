@@ -8,6 +8,8 @@
     */
 
     global $cLang;
+    global $cCopy;
+    global $cStart;
 
     $dirTheme = esc_url(get_template_directory_uri());
 
@@ -21,6 +23,9 @@
     <link rel="stylesheet" href="<?php echo $dirTheme; ?>/normalize.css" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" type="text/css" media="all">
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -49,9 +54,17 @@
         <a href="https://github.com/Jadzia626"><img src="<?php echo $dirTheme; ?>/theme-files/icon_github.png"></a>
     </div>
     <div id="side-footer">
-        &copy; 2014&ndash;<?php echo date("Y",time()); ?> Veronica Berglyd Olsen<br>
-        Design by Veronica Berglyd Olsen<br>
-        Photo by Amy Davis Roth, &copy;2014<br>
+        <?php if($cLang == 'no') { ?>
+            &copy;<?php echo $cStart."&ndash;".date("Y",time()); ?> <?php echo $cCopy; ?><br>
+            Design av <a href="http://vkbo.net">Veronica Berglyd Olsen</a><br>
+            Photo by Amy Davis Roth &copy;2014<br>
+            Drevet med <a href="http://wordpress.org">Wordpress</a><br>
+        <?php } else { ?>
+            &copy;<?php echo $cStart."&ndash;".date("Y",time()); ?> <?php echo $cCopy; ?><br>
+            Design by <a href="http://vkbo.net">Veronica Berglyd Olsen</a><br>
+            Photo by Amy Davis Roth &copy;2014<br>
+            Powered by <a href="http://wordpress.org">Wordpress</a><br>
+        <?php } ?>
     </div>
 </div>
 <!-- End Sidebar -->

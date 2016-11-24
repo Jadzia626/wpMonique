@@ -23,17 +23,19 @@
                 if(have_posts()) {
 
                     if(is_search()) {
-                        echo '<header class="page-header">';
-                        if($cLang == 'no') {
-                            echo 'Søkeresultat';
-                        } else {
-                            echo 'Search Result';
-                        }
-                        echo '<h1 class="page-title">'.get_search_query().'</h1>';
+                        echo '<header id="content-header">';
+                            if($cLang == 'no') {
+                                echo 'Søkeresultat';
+                            } else {
+                                echo 'Search Result';
+                            }
+                            echo '<h1 class="page-title">'.get_search_query().'</h1>';
                         echo '</header>';
                     } else {
                         if(!is_single()) {
-                            echo '<h2 class="page-title">Latest Posts</h2>';
+                            echo '<header id="content-header">';
+                            echo '<h1>Purple Noize</h1>';
+                            echo '</header>';
                         }
                     }
 

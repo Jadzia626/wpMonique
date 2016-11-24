@@ -16,11 +16,11 @@
         function wpMoniqueSetup() {
 
             add_theme_support( 'post-thumbnails' );
-            set_post_thumbnail_size(288,150,array('center','center'));
+            set_post_thumbnail_size(336,175,array('center','center'));
 
             register_nav_menus(array(
                 "primary"   => __("Left Menu","wpMonique"),
-                "mobile"    => __("Mobile menu","qpMonique"),
+                "mobile"    => __("Mobile Menu","wpMonique"),
             ));
 
             /* Enable support for Post Formats */

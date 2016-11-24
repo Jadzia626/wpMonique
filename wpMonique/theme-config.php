@@ -1,5 +1,5 @@
 <?php
     $cLang  = 'en';
-    $cCopy  = 'Veronica K. Berglyd Olsen';
-    $cStart = 2015;
+    $cCopy  = 'Veronica Berglyd Olsen';
+    $cStart = 2014;
 ?>
