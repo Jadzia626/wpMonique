@@ -30,6 +30,7 @@
 html {
     margin: 0;
     padding: 0;
+    background-color: #eeeeee;
 }
 
 body {
@@ -49,6 +50,10 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 400;
     min-width: 320px;
+    max-width: 1150px;
+    box-shadow: 0px 0px 10px 2px #a8a8a8;
+    -moz-box-shadow: 0px 0px 10px 2px #a8a8a8;
+    -webkit-box-shadow: 0px 0px 10px 2px #a8a8a8;
 }
 
 #sidebar {
@@ -252,17 +257,31 @@ a:hover {color: #d5802a;}
  * =================
  */
 
-/* Page Header */
+/* Body Style */
+
+#site-content {
+    padding: 85px 65px;
+    width: 720px;
+    #border: 1px solid #ff0000;
+}
+
+.blog #site-content,
+.single #site-content {
+    background-image: url("theme-files/featherpen.png");
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-position: 685px 17px;
+}
 
 #content-header {
-    padding: 35px 0 50px 0;
+    padding: 0 0 50px 0;
     #text-align: right;
     #border: 1px solid #ff0000;
 }
 
 #content-header h1 {
     margin: 0;
-    width: 615px;
+    width: 720px;
     text-align: right;
     font-family: 'Tangerine', serif;
     font-weight: 400;
@@ -271,17 +290,9 @@ a:hover {color: #d5802a;}
     #border: 1px solid #0000ff;
 }
 
-
-/* Body Style */
-
-#site-content {
-    padding: 50px 50px 50px 50px;
-    width: 720px;
-    background-image: url("theme-files/featherpen.png");
-    background-repeat: no-repeat;
-    background-size: 150px auto;
-    background-position: 670px 17px;
-    #border: 1px solid #ff0000;
+.blog #content-header h1,
+.single #content-header h1 {
+    width: 615px;
 }
 
 .entry-spacer {
@@ -399,7 +410,7 @@ h2.page-title {
 }
 
 .single .post .entry-title {
-    margin: 50px 0 0 0;
+    margin: 15px 0 0 0;
     border: none;
     font-family: 'Courgette', cursive;
     font-weight: 400;
@@ -599,7 +610,7 @@ h2.page-title {
 }
 
 .comment-list li {
-    padding: 5px;
+    #padding: 5px;
     margin-bottom: 20px;
 }
 
@@ -611,24 +622,24 @@ h2.page-title {
 }
 
 .comment-list .children li {
-    padding: 5px;
+    #padding: 5px;
     margin-bottom: 20px;
 }
 
 .comment-list .depth-1 {
-    background-color: #ffedd9;
+    #background-color: #ffedd9;
 }
 
 .comment-list .depth-2 {
-    background-color: #ffe6cc;
+    #background-color: #ffe6cc;
 }
 
 .comment-list .depth-3 {
-    background-color: #ffe0bf;
+    #background-color: #ffe0bf;
 }
 
 .comment-list .depth-4 {
-    background-color: #ffdab3;
+    #background-color: #ffdab3;
 }
 
 .comment-author .fn {

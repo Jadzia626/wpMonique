@@ -34,7 +34,7 @@
                     } else {
                         if(!is_single()) {
                             echo '<header id="content-header">';
-                            echo '<h1>Purple Noize</h1>';
+                            echo '<h1>Latest Posts</h1>';
                             echo '</header>';
                         }
                     }
