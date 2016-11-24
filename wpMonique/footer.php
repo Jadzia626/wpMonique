@@ -12,6 +12,9 @@
     </div>
     <!-- End Content -->
 
+    </div>
+    <!-- End Wrapper -->
+
     <?php wp_footer(); ?>
 
 </body>

@@ -36,6 +36,9 @@
 
 <body <?php body_class(); ?>>
 
+<!-- Begin Wrapper -->
+<div id="site-wrapper">
+
 <!-- Begin Sidebar -->
 <div id="sidebar">
     <div id="sidebar-img">
