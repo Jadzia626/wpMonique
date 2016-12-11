@@ -288,9 +288,14 @@ a:hover {color: #d5802a;}
     padding: 85px 65px;
     width: 720px;
     #border: 1px solid #ff0000;
+    background-image: url("theme-files/waves-banner.png");
+    background-repeat: no-repeat;
+    background-position: 65px 120px;
 }
 
+/*
 .blog #site-content,
+*/
 .single #site-content {
     background-image: url("theme-files/featherpen.png");
     background-repeat: no-repeat;
@@ -315,7 +320,9 @@ a:hover {color: #d5802a;}
     #border: 1px solid #0000ff;
 }
 
+/*
 .blog #content-header h1,
+*/
 .single #content-header h1 {
     width: 615px;
 }
@@ -757,6 +764,30 @@ h2.page-title {
     content: ')';
 }
 
+/**
+ *  6.1 Response
+ * ==============
+ */
+
+#respond label {
+    display: block;
+}
+
+#respond textarea {
+    width: 100%;
+}
+
+#respond input {
+    width: 50%;
+}
+
+#respond .form-submit {
+    text-align: right;
+}
+
+#respond .submit {
+    width: 150px;
+}
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
