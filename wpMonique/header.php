@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" type="text/css" media="all">
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">

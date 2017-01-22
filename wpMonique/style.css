@@ -48,7 +48,8 @@ body {
     #background-attachment: fixed;
     color: #21201f;
     font-size: 15px;
-    font-family: 'Roboto', Arial, sans-serif;
+    #font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
     font-weight: 400;
     min-width: 320px;
     #max-width: 1150px;
@@ -106,6 +107,12 @@ body {
     #-webkit-box-shadow: 0px 0px 10px 2px #a8a8a8;
 }
 
+#footer {
+    width: 850px;
+    margin: 0 0 0 300px;
+    #border: 1px solid #ff0000;
+}
+
 /* Default Formatting */
 
 h1, h2 {
@@ -114,8 +121,9 @@ h1, h2 {
 }
 
 h3, h4, h5, h6 {
-    font-family: 'Roboto', cursive;
-    font-weight: 700;
+    #font-family: 'Roboto', cursive;
+    font-family: 'Source Sans Pro', cursive;
+    font-weight: 900;
 }
 
 h1      {font-size: 2.20em;}
@@ -286,7 +294,7 @@ a:hover {color: #d5802a;}
 /* Body Style */
 
 #site-content {
-    padding: 85px 65px;
+    padding: 40px 65px;
     width: 720px;
     #border: 1px solid #ff0000;
     background-image: url("theme-files/waves-banner.png");
@@ -305,7 +313,7 @@ a:hover {color: #d5802a;}
 }
 
 #content-header {
-    padding: 0 0 50px 0;
+    padding: 45px 0;
     #text-align: right;
     #border: 1px solid #ff0000;
 }
@@ -434,6 +442,13 @@ h2.page-title {
  * ============
  */
 
+.single .entry-header {
+    height: 100px;
+    display: table-cell;
+    vertical-align: bottom;
+    #border: 1px solid #FF0000;
+}
+
 .single .entry-loop {
     display: inline-block;
     vertical-align: top;
@@ -443,11 +458,13 @@ h2.page-title {
 }
 
 .single .post .entry-title {
-    margin: 15px 0 0 0;
+    margin: 0;
     border: none;
+    width: 615px;
     font-family: 'Courgette', cursive;
     font-weight: 400;
     font-size: 2.2em;
+    #vertical-align: bottom;
     #border: 1px solid #0000ff;
 }
 
@@ -659,6 +676,7 @@ h2.page-title {
     margin-bottom: 20px;
 }
 
+/*
 .comment-list .depth-1 {
     #background-color: #ffedd9;
 }
@@ -674,6 +692,7 @@ h2.page-title {
 .comment-list .depth-4 {
     #background-color: #ffdab3;
 }
+*/
 
 .comment-author .fn {
     font-style: normal;
@@ -788,6 +807,82 @@ h2.page-title {
 
 #respond .submit {
     width: 150px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/**
+ *  8. Site Footer
+ * ================
+ */
+
+#site-footer {
+    display: table;
+    color: #999999;
+    #color: #c7bfb5;
+    width: 100%;
+}
+
+.footer-left {
+    display: table-cell;
+    width: 55%;
+    vertical-align: top;
+    padding: 40px 10px 40px 65px;
+}
+
+.footer-right {
+    display: table-cell;
+    width: 45%;
+    vertical-align: top;
+    padding: 40px 65px 40px 10px;
+}
+
+.footer-left h2,
+.footer-right h2 {
+    font-family: 'Courgette', cursive;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 0 0 8px 0;
+}
+
+.footer-menu {
+    list-style: none;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li::after {
+    content: " \00bb";
+}
+
+.footer-menu li {
+    #display: inline;
+    margin: 0;
+    text-align: right;
+    #padding: 0 8px;
+    #border-left: 1px solid #fff7ee;
+    #border: 1px solid #ffff00;
+}
+
+.footer-menu li:hover {
+    background-color: rgba(255,247,238,0.2);
+}
+
+.footer-menu a {
+    color: #999999;
+    #color: #c7bfb5;
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    color: #999999;
+    #color: #c7bfb5;
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

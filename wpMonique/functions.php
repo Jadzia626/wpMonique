@@ -19,8 +19,9 @@
             set_post_thumbnail_size(336,175,array('center','center'));
 
             register_nav_menus(array(
-                "primary"   => __("Left Menu","wpMonique"),
-                "mobile"    => __("Mobile Menu","wpMonique"),
+                "primary" => __("Left Menu","wpMonique"),
+                "footer"  => __("Footer Menu","wpMonique"),
+                "mobile"  => __("Mobile Menu","wpMonique"),
             ));
 
             /* Enable support for Post Formats */
