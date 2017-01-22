@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" type="text/css" media="all">
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
@@ -43,8 +44,9 @@
 <!-- Begin Sidebar -->
 <div id="sidebar">
     <div id="sidebar-img">
-        <img src="<?php echo $dirTheme; ?>/theme-files/veronica.png" width="240px">
+        <img src="<?php echo $dirTheme; ?>/theme-files/veronica-photo.png">
     </div>
+    <!-- <div id="side-top">[vkbo]</div> -->
     <div id="navbar" class="navbar">
         <nav id="site-navigation" class="navigation main-navigation" role="navigation">
             <?php wp_nav_menu(array("theme_location"=>"primary","menu_class"=>"nav-menu")); ?>
@@ -75,4 +77,3 @@
 
 <!-- Begin Content -->
 <div id="content">
-

@@ -19,6 +19,16 @@
 
         if(is_single()) {
 
+            echo '<div class="entry-feature">';
+
+                if(has_post_thumbnail()) the_post_thumbnail(array(768,400));
+                $sFCaption = get_post(get_post_thumbnail_id())->post_excerpt;
+                if(!empty($sFCaption)) {
+                    echo '<span class="feature-caption">'.$sFCaption.'</span>';
+                }
+
+            echo '</div>';
+
             echo '<header class="entry-header">';
                 the_title('<h1 class="entry-title">','</h1>');
             echo '</header>';
@@ -49,16 +59,6 @@
                 //~ echo '<br>';
                 //~ echo fPostViews(get_the_ID());
                 //~ echo ($cLang == 'no' ? ' visninger' : ' views');
-
-            echo '</div>';
-
-            echo '<div class="entry-feature">';
-
-                if(has_post_thumbnail()) the_post_thumbnail(array(720,375));
-                $sFCaption = get_post(get_post_thumbnail_id())->post_excerpt;
-                if(!empty($sFCaption)) {
-                    echo '<span class="feature-caption">'.$sFCaption.'</span>';
-                }
 
             echo '</div>';
 
