@@ -1,5 +1,60 @@
 
+html {
+    margin: 0;
+}
+
 body {
-    background-color: #FFFFFF;
+    margin: 0;
+    background-color: #ffffff;
     color: #000000;
+}
+
+#header {
+    width: 100%;
+    /*border: 1px solid #ff0000;*/
+    padding: 20px 0;
+    display: table;
+}
+
+#middle {
+    width: 100%;
+    background-image: url("background-grey.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 600px;
+}
+
+#content {
+    background-color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+#site-title {
+    display: table-cell;
+    /*border: 1px solid #00ff00;*/
+    text-align: left;
+    padding-left: 10%;
+}
+
+#site-title h1 {
+    margin: 0;
+}
+
+#main-menu {
+    display: table-cell;
+    /*border: 1px solid #00ff00;*/
+    text-align: right;
+    padding-right: 10%;
+}
+
+#main-menu ul {
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+#main-menu li {
+    display: inline-block;
 }
