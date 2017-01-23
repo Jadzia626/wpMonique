@@ -21,11 +21,12 @@
     <title><?php wp_title('|',true,'right'); ?><?php bloginfo('name'); ?></title>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link rel="stylesheet" href="<?php echo $dirTheme; ?>/normalize.css" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css" media="all">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette" type="text/css" media="all"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" type="text/css" media="all"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" media="all"> -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css" media="all"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" media="all">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" type="text/css" media="all">
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
@@ -43,7 +44,7 @@
 <!-- Begin Sidebar -->
 <div id="sidebar">
     <div id="sidebar-img">
-        <img src="<?php echo $dirTheme; ?>/theme-files/veronica.png" width="240px">
+        <img src="<?php echo $dirTheme; ?>/theme-files/veronica-photo.png">
     </div>
     <div id="navbar" class="navbar">
         <nav id="site-navigation" class="navigation main-navigation" role="navigation">
@@ -75,4 +76,3 @@
 
 <!-- Begin Content -->
 <div id="content">
-
