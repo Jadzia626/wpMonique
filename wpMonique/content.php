@@ -88,13 +88,13 @@
 
         } else {
 
-            echo '<div class="entry-wrapper">';
+            echo '<div class="entry-list-wrapper">';
                 echo '<div class="entry-list-feature">';
                     echo '<a href="'.esc_url(get_permalink()).'">';
                     if(has_post_thumbnail()) {
-                        the_post_thumbnail(array(408,213));
+                        the_post_thumbnail(array(336,175));
                     } else {
-                        echo '<img width="408" height="213" src="'.$dirTheme.'/theme-files/no-feature.png" class="wp-post-image">';
+                        echo '<img src="'.$dirTheme.'/theme-files/no-feature.png" class="wp-post-image">';
                     }
                     echo '</a>';
                 echo '</div>';
@@ -102,23 +102,22 @@
                     echo '<header class="entry-list-header">';
                         the_title('<a href="'.esc_url(get_permalink()).'">','</a>');
                     echo '</header>';
-                    echo '<div class="entry-list-date">';
-                        echo ($cLang == 'no' ? get_the_date('j. F Y') : get_the_date('F j, Y'));
-                    echo '</div>';
                     echo '<div class="entry-list-meta">';
-                        echo wpMoniqueGetCategoryList(get_the_ID());
-                        echo '<br>';
+                        echo ($cLang == 'no' ? get_the_date('j. F Y') : get_the_date('F j, Y'));
+                        echo '&nbsp;&bull;&nbsp;';
                         if($cLang == 'no') {
                             echo comments_number('ingen kommentarer','én kommentar','% kommentarer');
                         } else {
                             echo comments_number('no comments','one comment','% comments');
                         }
-                        echo ', ';
+                        echo '&nbsp;&bull;&nbsp;';
                         echo fPostViews(get_the_ID());
                         echo ($cLang == 'no' ? ' visninger' : ' views');
+                        echo '<br>';
+                        echo wpMoniqueGetCategoryList(get_the_ID());
                     echo '</div>';
                     echo '<div class="entry-list-excerpt">';
-                        // the_excerpt();
+                        the_excerpt();
                         if($cLang == 'no') {
                             echo get_the_tag_list('<footer>Stikkord: ',', ','</footer>');
                         } else {
@@ -127,7 +126,9 @@
                     echo '</div>';
                 echo '</div>';
             echo '</div>';
+
         }
+
     ?>
 </article>
 <!-- End Standard Content Template -->
