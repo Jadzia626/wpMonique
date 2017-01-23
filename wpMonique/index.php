@@ -40,10 +40,10 @@
                     }
 
                     echo '<div class="entry-outer">';
-                    while (have_posts()) {
-                        the_post();
-                        get_template_part('content',get_post_format());
-                    }
+                        while (have_posts()) {
+                            the_post();
+                            get_template_part('content',get_post_format());
+                        }
                     echo '</div>';
                     the_posts_pagination(array('mid_size' => 2));
                 } else {

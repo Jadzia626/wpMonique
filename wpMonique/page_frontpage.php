@@ -23,10 +23,12 @@
                     }
                 }
 
-                echo '<h2>Latest Posts</h2>';
+                echo '<div class="entry-section">';
+                    echo '<h2>Latest Posts</h2>';
+                echo '</div>';
 
                 $aGet = array(
-                    'posts_per_page'   => 3,
+                    'posts_per_page'   => 4,
                     'offset'           => 0,
                     'page'             => 1,
                     'orderby'          => 'date',
@@ -38,10 +40,12 @@
 
                 query_posts($aGet);
                 if (have_posts()) {
-                    while (have_posts()) {
-                        the_post();
-                        get_template_part('content',get_post_format());
-                    }
+                    echo '<div class="entry-outer">';
+                        while (have_posts()) {
+                            the_post();
+                            get_template_part('content',get_post_format());
+                        }
+                    echo '</div>';
                 }
             ?>
         </div>

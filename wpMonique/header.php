@@ -10,6 +10,7 @@
     global $cLang;
     global $cCopy;
     global $cStart;
+    global $sThemeCol;
 
     $dirTheme = esc_url(get_template_directory_uri());
 
@@ -29,6 +30,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" media="all">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" type="text/css" media="all">
+    <?php if($sThemeCol != "") { ?>
+        <link rel="stylesheet" href="<?php echo $dirTheme."/style".$sThemeCol.".css"; ?>" type="text/css" media="all">
+    <?php } ?>
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -52,11 +56,11 @@
         </nav>
     </div>
     <div id="so-me">
-        <a href="https://twitter.com/VeronicaInPink"><img src="<?php echo $dirTheme; ?>/theme-files/icon_twitter.png"></a>
-        <a href="https://www.facebook.com/jadzia626"><img src="<?php echo $dirTheme; ?>/theme-files/icon_facebook.png"></a>
-        <a href="https://plus.google.com/+VeronicaKBerglydOlsen"><img src="<?php echo $dirTheme; ?>/theme-files/icon_googleplus.png"></a>
-        <a href="https://linkedin.com/in/veronicakbolsen"><img src="<?php echo $dirTheme; ?>/theme-files/icon_linkedin.png"></a>
-        <a href="https://github.com/Jadzia626"><img src="<?php echo $dirTheme; ?>/theme-files/icon_github.png"></a>
+        <a href="https://twitter.com/VeronicaInPink"><img src="<?php echo $dirTheme."/theme-files/icon_twitter".$sThemeCol.".png"; ?>"></a>
+        <a href="https://www.facebook.com/jadzia626"><img src="<?php echo $dirTheme."/theme-files/icon_facebook".$sThemeCol.".png"; ?>"></a>
+        <a href="https://plus.google.com/+VeronicaKBerglydOlsen"><img src="<?php echo $dirTheme."/theme-files/icon_googleplus".$sThemeCol.".png"; ?>"></a>
+        <a href="https://linkedin.com/in/veronicakbolsen"><img src="<?php echo $dirTheme."/theme-files/icon_linkedin".$sThemeCol.".png"; ?>"></a>
+        <a href="https://github.com/Jadzia626"><img src="<?php echo $dirTheme."/theme-files/icon_github".$sThemeCol.".png"; ?>"></a>
     </div>
     <div id="side-footer">
         <?php if($cLang == 'no') { ?>
