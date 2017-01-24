@@ -19,12 +19,13 @@
  *     4.1 Entry List
  *     4.2 Entry Content
  *     4.3 Entry Extras
- *  5. Comments
- *     5.1 Response
- *  6. Site Footer
- *  7. Other Styles
- *     7.1 Images
- *     7.2 Embeds
+ *  5. Page
+ *  6. Comments
+ *     6.1 Response
+ *  7. Site Footer
+ *  8. Other Styles
+ *     8.1 Images
+ *     8.2 Embeds
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -97,11 +98,11 @@ h3, h4, h5, h6 {
 }
 
 h1      {font-size: 2.20em;}
-h2      {font-size: 1.75em;}
-h3      {font-size: 1.20em;}
-h4      {font-size: 1.15em;}
+h2      {font-size: 1.80em;}
+h3      {font-size: 1.30em;}
+h4      {font-size: 1.20em;}
 h5      {font-size: 1.10em;}
-h6      {font-size: 1.05em;}
+h6      {font-size: 1.00em;}
 p       {line-height: 1.5em;}
 a       {color: #c80000; text-decoration: none;}
 a:hover {color: #c80000; text-decoration: underline;}
@@ -560,7 +561,60 @@ a:hover {color: #c80000; text-decoration: underline;}
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
- *  5. Comments
+ *  5. Page Templates
+ * ===================
+ */
+
+.publication-entry {
+    width: 700px;
+    margin-left: 58px;
+    margin-top: 20px;
+}
+
+.publication-entry h5 {
+    margin: 2px 0;
+}
+
+.publication-journal {
+    margin: 2px 0;
+}
+
+.publication-details {
+    margin: 2px 0;
+    font-size: 0.9em;
+    color: #707070;
+    line-height: 1.3em;
+}
+
+.publication-meta {
+    text-align: right;
+    margin-top: 4px;
+    color: #c80000;
+}
+
+.publication-meta span {
+    margin-left: 1em;
+}
+
+.publication-meta img {
+    vertical-align: bottom;
+    margin: 0 2px 0 0;
+}
+
+.publication-entry textarea {
+    font-family: "Roboto Mono", monospace;
+    font-size: 12px;
+    width: 700px;
+    height: 150px;
+    border: 1px solid #940000;
+    margin-top: 12px;
+    white-space: pre;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/**
+ *  6. Comments
  * =============
  */
 
@@ -701,7 +755,7 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 /**
- *  5.1 Response
+ *  6.1 Response
  * ==============
  */
 
@@ -728,7 +782,7 @@ a:hover {color: #c80000; text-decoration: underline;}
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
- *  6. Site Footer
+ *  7. Site Footer
  * ================
  */
 
@@ -793,12 +847,12 @@ a:hover {color: #c80000; text-decoration: underline;}
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
- *  7. Other Styles
+ *  8. Other Styles
  * =================
  */
 
 /**
- *  7.1 Images
+ *  8.1 Images
  * ============
  */
 
@@ -816,9 +870,8 @@ a:hover {color: #c80000; text-decoration: underline;}
     max-width: 100% !important;
 }
 
-
 /**
- *  7.2 Embeds
+ *  8.2 Embeds
  * ============
  */
 
