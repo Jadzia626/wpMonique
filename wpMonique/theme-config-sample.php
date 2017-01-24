@@ -4,4 +4,5 @@
     $cStart     = 2016;
     $sBlobTitle = "Title";
     $sBlobText  = "Text";
+    $sThemeCol  = "";
 ?>

@@ -34,7 +34,7 @@
             /* Content Width */
 
             if(!isset($content_width)) {
-                $content_width = 650;
+                $content_width = 700;
             }
         }
     }

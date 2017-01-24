@@ -46,18 +46,6 @@
                 echo '&nbsp;&bull;&nbsp;';
                 echo fPostViews(get_the_ID());
                 echo ($cLang == 'no' ? ' visninger' : ' views');
-                //~ echo '<b>'.($cLang == 'no' ? get_the_date('j. F Y') : get_the_date('F j, Y')).'</b>';
-                //~ echo '<br>';
-                //~ echo wpMoniqueGetCategoryList(get_the_ID());
-                //~ echo '<br>';
-                //~ if($cLang == 'no') {
-                    //~ echo comments_number('ingen kommentarer','én kommentar','% kommentarer');
-                //~ } else {
-                    //~ echo comments_number('no comments','one comment','% comments');
-                //~ }
-                //~ echo '<br>';
-                //~ echo fPostViews(get_the_ID());
-                //~ echo ($cLang == 'no' ? ' visninger' : ' views');
 
             echo '</div>';
 
