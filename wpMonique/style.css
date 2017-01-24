@@ -892,3 +892,172 @@ a:hover {color: #c80000; text-decoration: underline;}
     width:100%;
     height:100%;
 }
+
+/**
+ *  9. Mobile
+ * ===========
+ */
+
+@media screen and (max-width: 1158px) {
+
+    #site-wrapper {
+        margin: 0 auto;
+        width: 816px;
+    }
+
+    #sidebar {
+        left: -300px;
+        #z-index: -100;
+    }
+
+    #mobile-top {
+        display: block;
+        z-index: 200;
+    }
+
+    #content {
+        margin: 0;
+    }
+
+    #footer {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 818px) {
+
+    #site-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+    #content {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    #footer {
+        width: 100%;
+    }
+
+    /* Site Content */
+
+    #site-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #content-header h1 {
+        width: 92%;
+        margin-left: 4%;
+        font-size: 2.2em;
+    }
+
+    /* Entry List */
+
+    .entry-outer {
+        width: 92%;
+        margin-left: 4%;
+        display: block;
+    }
+
+    .entry-loop article {
+        width: 100%;
+    }
+
+    .entry-list-feature img {
+        width: 100%;
+        height: auto;
+    }
+
+    .entry-list-header,
+    .entry-list-meta,
+    .entry-list-footer,
+    .entry-list-excerpt {
+        width: 100%;
+    }
+
+    /* Entry Content */
+
+    .entry-feature {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    .entry-feature img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .entry-section,
+    .entry-header,
+    .entry-content,
+    .entry-meta,
+    .entry-footer {
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    .entry-header {
+        margin-top: 20px;
+    }
+    .entry-title {
+    }
+
+    .entry-content blockquote {
+        border-left: 3px solid #c80000;
+        padding: 4px 12px;
+        margin: 0 0 0 4%;
+    }
+
+    /* Entry Extras */
+
+    .entry-related {
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    .wpmonique-relatedsingle li {
+        width: 100%;
+    }
+
+    .wpmonique-relatedleft li {
+        margin: 0;
+    }
+
+    .wpmonique-relatedsingle li img {
+        width: 100%;
+    }
+
+    /* Comments */
+
+    #comments {
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    /* Site Footer */
+
+    #site-footer {
+        display: block;
+    }
+
+    .footer-left,
+    .footer-right {
+        display: block;
+        width: 92%;
+        padding: 4%;
+    }
+
+    .footer-right h2 {
+        font-size: 0em;
+        margin: 0;
+    }
+}
