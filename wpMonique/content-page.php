@@ -11,8 +11,10 @@
 ?>
 
 <!-- Begin Page Content Template -->
+<header id="content-header">
+    <?php the_title('<h1>','</h1>'); ?>
+</header>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php the_title('<header id="content-header"><h1 class="page-title">','</h1></header>'); ?>
     <div class="entry-content">
         <?php
             the_content();

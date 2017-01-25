@@ -15,18 +15,18 @@
     $oDB1 = new mysqli($cDBHost,$cDBUser,$cDBPass,$cDBData);
     $oDB1->set_charset("utf8");
 
-    $SQL  = "SELECT ID, Date, Type, Title, Journal, Authors, URL, DOI, PrePrint, PDF, BibTeX ";
+    $SQL  = "SELECT * ";
     $SQL .= "FROM publications ";
-    $SQL .= "ORDER BY FIELD(Type,'Book','Paper','Talk','Proceedings','Thesis','Report'), Date DESC";
+    $SQL .= "ORDER BY Date DESC";
     $RS1  = $oDB1->query($SQL);
 
     $aTypeTranslate = array(
-        "Book"        => "Books",
-        "Paper"       => "Papers",
-        "Thesis"      => "Theses",
+        "Book"        => "Book",
+        "Paper"       => "Journal Article",
+        "Thesis"      => "Thesis",
         "Proceedings" => "Proceedings",
-        "Report"      => "Reports",
-        "Talk"        => "Conference Talks",
+        "Report"      => "Report",
+        "Talk"        => "Conference Talk",
     );
 
     $aPublication = array(
@@ -58,30 +58,38 @@
     </script>
     <div id="site-content">
         <div class="entry-loop">
+            <header id="content-header">
+                <?php the_title('<h1>','</h1>'); ?>
+            </header>
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php
-                if (have_posts()) {
-                    while (have_posts()) {
-                        the_post();
-                        get_template_part('content','page');
-                    }
-                }
+                // if (have_posts()) {
+                //     while (have_posts()) {
+                //         the_post();
+                //         get_template_part('content','page');
+                //     }
+                // }
 
                 $sPrev = "";
                 while($aRow = $RS1->fetch_assoc()) {
                     echo '<div class="publication-entry">';
-                        if($aRow["Type"] != $sPrev) {
-                            echo '<h2>'.$aTypeTranslate[$aRow["Type"]].'</h2>';
-                            $sPrev = $aRow["Type"];
+                        $sYear = date("Y",strtotime($aRow["Date"]));
+                        $sDate = date("M j, Y",strtotime($aRow["Date"]));
+                        if($sYear != $sPrev) {
+                            echo '<h2>'.$sYear.'</h2>';
+                            $sPrev = $sYear;
                         }
-                        echo '<h5><a href="'.$aRow["URL"].'">'.$aRow["Title"].'</a></h5>';
-                        echo '<div class="publication-journal"><b>'.date("M j, Y",strtotime($aRow["Date"])).'</b>';
-                        echo ' &ndash; '.$aRow["Journal"].'</div>';
-                        if($aPublication[$aRow["Type"]]) {
-                            echo '<div class="publication-details"><b>Authors:</b> '.$aRow["Authors"].'</div>';
-                        } else {
-                            echo '<div class="publication-details"><b>Presented by:</b> '.$aRow["Authors"].'</div>';
-                        }
+                        echo '<div class="publication-type">'.$aTypeTranslate[$aRow["Type"]].'</div>';
+                        echo '<div class="publication-title"><a href="'.$aRow["URL"].'">'.$aRow["Title"].'</a></div>';
+                        echo '<div class="publication-journal">'.$sDate.' &ndash; '.$aRow["Journal"].'</div>';
+                        echo '<div class="publication-details"><b>Authors:</b> '.$aRow["Authors"].'</div>';
                         echo '<div class="publication-meta">';
+                            if($aRow["Slides"] != "") {
+                                echo '<span>';
+                                    echo '<img src="'.$dirTheme.'/theme-files/icon_slides.png" height="16px">';
+                                    echo '<a href="'.$aRow["Slides"].'">Slides</a>';
+                                echo '</span>';
+                            }
                             if($aRow["PrePrint"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_pdf.png" height="16px">';
@@ -91,11 +99,7 @@
                             if($aRow["PDF"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_pdf.png" height="16px">';
-                                    if($aPublication[$aRow["Type"]]) {
-                                        echo '<a href="'.$aRow["PDF"].'">PDF</a>';
-                                    } else {
-                                        echo '<a href="'.$aRow["PDF"].'">Slides</a>';
-                                    }
+                                    echo '<a href="'.$aRow["PDF"].'">PDF</a>';
                                 echo '</span>';
                             }
                             if($aRow["DOI"] != "") {
@@ -115,6 +119,7 @@
                     echo '</div>';
                 }
             ?>
+            </article>
         </div>
     </div>
     <!-- End Site Content -->
