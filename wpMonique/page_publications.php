@@ -100,7 +100,7 @@
                             }
                             if($aRow["DOI"] != "") {
                                 echo '<span>';
-                                    echo '<b>DOI:</b> ';
+                                    echo '<img src="'.$dirTheme.'/theme-files/icon_doi.png" height="16px">';
                                     echo '<a href="http://dx.doi.org/'.$aRow["DOI"].'">'.$aRow["DOI"].'</a>';
                                 echo '</span>';
                             }
