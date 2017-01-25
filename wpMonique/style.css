@@ -98,12 +98,12 @@ h3, h4, h5, h6 {
     font-weight: 900;
 }
 
-h1      {font-size: 2.0em;}
-h2      {font-size: 1.8em;}
-h3      {font-size: 1.6em;}
-h4      {font-size: 1.2em;}
-h5      {font-size: 1.1em;}
-h6      {font-size: 1.0em;}
+h1      {font-size: 2.00em;}
+h2      {font-size: 1.75em;}
+h3      {font-size: 1.50em;}
+h4      {font-size: 1.25em;}
+h5      {font-size: 1.10em;}
+h6      {font-size: 1.00em;}
 p       {line-height: 1.5em;}
 a       {color: #c80000; text-decoration: none;}
 a:hover {color: #c80000; text-decoration: underline;}
@@ -183,6 +183,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     padding: 8px;
     margin: 0;
     z-index: -200;
+    left: 0;
 }
 
 #mobile-top img {
@@ -908,7 +909,10 @@ a:hover {color: #c80000; text-decoration: underline;}
 
     #sidebar {
         left: -300px;
-        #z-index: -100;
+        background-color: #f7f7f7;
+        border-right: 1px solid #d0d0d0;
+        border-bottom: 1px solid #d0d0d0;
+        border-radius: 0 0 20px 0;
     }
 
     #mobile-top {
@@ -1060,5 +1064,12 @@ a:hover {color: #c80000; text-decoration: underline;}
     .footer-right h2 {
         font-size: 0em;
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+
+    #sidebar {
+        left: inherit !important;
     }
 }

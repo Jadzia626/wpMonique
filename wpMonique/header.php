@@ -36,7 +36,7 @@
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php echo $dirTheme; ?>/mobile.js"></script>
+    <script type="text/javascript" src="<?php echo $dirTheme; ?>/script/mobile.js"></script>
     <?php wp_head(); ?>
 </head>
 
@@ -77,6 +77,14 @@
     </div>
 </div>
 <!-- End Sidebar -->
+
+<!-- Begin Mobile Bar -->
+<div id="mobile-top">
+    <a rel="external" href="#navmenu" id="menu-btn">
+        <img src="<?php echo $dirTheme; ?>/theme-files/icon_menu_b.png">
+    </a>
+</div>
+<!-- End Mobile Bar -->
 
 <!-- Begin Content -->
 <div id="content">

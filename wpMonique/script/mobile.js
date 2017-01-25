@@ -8,7 +8,7 @@
 $(document).ready(function(){
     var pagebody = $("#mobile-top");
     var themenu  = $("#sidebar");
-    var topbar   = $("#mobile-header");
+    var topbar   = $("#mobile-top");
     var content  = $("#content");
     var footer   = $("#site-bottom");
     var viewport = {
@@ -18,41 +18,41 @@ $(document).ready(function(){
 
     function openme() {
         $(function () {
-            //~ topbar.animate({
-               //~ left: "300px"
-            //~ }, { duration: 300, queue: false });
+            topbar.animate({
+               left: "300px"
+            }, { duration: 300, queue: false });
             themenu.animate({
                left: "0px"
             }, { duration: 300, queue: false });
-            pagebody.animate({
-               left: "300px"
-            }, { duration: 300, queue: false });
-            //~ content.animate({
-               //~ left: "300px",
-            //~ }, { duration: 300, queue: false });
-            //~ footer.animate({
-               //~ left: "300px"
-            //~ }, { duration: 300, queue: false });
+            // pagebody.animate({
+            //    left: "300px"
+            // }, { duration: 300, queue: false });
+            // content.animate({
+            //    left: "300px",
+            // }, { duration: 300, queue: false });
+            // footer.animate({
+            //    left: "300px"
+            // }, { duration: 300, queue: false });
         });
     }
 
     function closeme() {
         var closeme = $(function() {
-            //~ topbar.animate({
-                //~ left: "0px"
-            //~ }, { duration: 180, queue: false });
+            topbar.animate({
+                left: "0px"
+            }, { duration: 180, queue: false });
             themenu.animate({
                 left: "-300px"
             }, { duration: 180, queue: false });
-            pagebody.animate({
-                left: "0px"
-            }, { duration: 180, queue: false });
-            //~ content.animate({
-                //~ left: "0px"
-            //~ }, { duration: 180, queue: false });
-            //~ footer.animate({
-                //~ left: "0px"
-            //~ }, { duration: 180, queue: false });
+            // pagebody.animate({
+            //     left: "0px"
+            // }, { duration: 180, queue: false });
+            // content.animate({
+            //     left: "0px"
+            // }, { duration: 180, queue: false });
+            // footer.animate({
+            //     left: "0px"
+            // }, { duration: 180, queue: false });
         });
     }
 
