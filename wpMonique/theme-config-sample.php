@@ -5,4 +5,9 @@
     $sBlobTitle = "Title";
     $sBlobText  = "Text";
     $sThemeCol  = "";
+
+    $cDBUser    = "";
+    $cDBPass    = "";
+    $cDBHost    = "";
+    $cDBData    = "";
 ?>

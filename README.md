@@ -2,7 +2,7 @@
 
 A Wordpress theme
 
-**Current Version:** 1.0
+**Current Version:** 1.0.1
 
 This is a simple, clean wordpress theme designed for my own website and my two blogs. It is designed for my own sites only, and therefore only have the exact functionality I need for these sites. I have made the code public only for reference and as example code.
 

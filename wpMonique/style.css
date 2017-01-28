@@ -4,7 +4,7 @@
     Author: Veronica Berglyd Olsen
     Author URI: http://vkbo.net/
     Description: Standard theme for vkbo.net
-    Version: 1.0
+    Version: 1.0.1
     License: Copyright Veronica K. Berglyd Olsen
 */
 
@@ -1122,6 +1122,21 @@ a:hover {color: #c80000; text-decoration: underline;}
     }
 
     .wpmonique-relatedsingle li img {
+        width: 100%;
+    }
+
+    /* Page Templates */
+
+    .publication-entry {
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    .publication-title {
+        font-size: 1.15em;
+    }
+
+    .publication-entry textarea {
         width: 100%;
     }
 

@@ -23,9 +23,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <link rel="stylesheet" href="<?php echo $dirTheme; ?>/normalize.css" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" media="all">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" type="text/css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" type="text/css" media="all">
@@ -65,13 +62,13 @@
     <div id="side-footer">
         <?php if($cLang == 'no') { ?>
             &copy;<?php echo $cStart."&ndash;".date("Y",time()); ?> <?php echo $cCopy; ?><br>
-            Design av <a href="http://vkbo.net">Veronica Berglyd Olsen</a><br>
             Photo by Amy Davis Roth &copy;2014<br>
+            Wordpress tema <a href="https://github.com/Jadzia626/wpMonique">wpMonique</a><br>
             Drevet med <a href="http://wordpress.org">Wordpress</a><br>
         <?php } else { ?>
             &copy;<?php echo $cStart."&ndash;".date("Y",time()); ?> <?php echo $cCopy; ?><br>
-            Design by <a href="http://vkbo.net">Veronica Berglyd Olsen</a><br>
             Photo by Amy Davis Roth &copy;2014<br>
+            Wordpress theme <a href="https://github.com/Jadzia626/wpMonique">wpMonique</a><br>
             Powered by <a href="http://wordpress.org">Wordpress</a><br>
         <?php } ?>
     </div>
