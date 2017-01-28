@@ -355,6 +355,7 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 .entry-feature span.feature-caption {
+    display: block;
     margin: 8px 10px;
     font-size: 0.8em;
     color: #707070;
@@ -394,7 +395,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     color: #707070;
 }
 
-.entry-footer {
+.page .entry-footer {
     text-align: right;
 }
 
@@ -407,7 +408,10 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 .entry-feature-page span.feature-caption {
+    display: block;
     margin: 8px 0;
+    font-size: 0.8em;
+    color: #707070;
 }
 
 /* Alignment */
@@ -942,7 +946,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     }
 
     #sidebar {
-        left: -300px;
+        left: -301px;
         background-color: #f7f7f7;
         border-right: 1px solid #d0d0d0;
         border-bottom: 1px solid #d0d0d0;
@@ -964,6 +968,13 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 @media screen and (max-width: 818px) {
+
+    h1 {font-size: 1.80em;}
+    h2 {font-size: 1.60em;}
+    h3 {font-size: 1.40em;}
+    h4 {font-size: 1.20em;}
+    h5 {font-size: 1.10em;}
+    h6 {font-size: 1.00em;}
 
     #site-wrapper {
         margin: 0;
@@ -990,9 +1001,15 @@ a:hover {color: #c80000; text-decoration: underline;}
         margin-bottom: 20px;
     }
 
-    #content-header h1 {
+    #content-header {
         width: 92%;
         margin-left: 4%;
+        padding: 48px 0 24px 0;
+    }
+
+    #content-header h1 {
+        margin: 0;
+        width: 100%;
         font-size: 2.2em;
     }
 
@@ -1011,6 +1028,10 @@ a:hover {color: #c80000; text-decoration: underline;}
     .entry-list-feature img {
         width: 100%;
         height: auto;
+    }
+
+    .entry-feature span.feature-caption {
+        margin: 8px 4%;
     }
 
     .entry-list-header,
@@ -1044,10 +1065,31 @@ a:hover {color: #c80000; text-decoration: underline;}
         margin-left: 4%;
     }
 
+    .entry-section h2 {
+        font-size: 1.4em;
+    }
+
     .entry-header {
         margin-top: 20px;
     }
+
     .entry-title {
+        font-size: 1.8em;
+    }
+
+    .entry-feature-page {
+        width: 92%;
+        margin-left: 4%;
+    }
+
+    .entry-feature-page img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .entry-feature-page span.feature-caption {
+        margin: 8px 4%;
     }
 
     .entry-content blockquote {
@@ -1063,12 +1105,20 @@ a:hover {color: #c80000; text-decoration: underline;}
         margin-left: 4%;
     }
 
+    .wpmonique-relatedsingle {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
     .wpmonique-relatedsingle li {
         width: 100%;
+        margin-bottom: 12px;
     }
 
     .wpmonique-relatedleft li {
         margin: 0;
+        margin-bottom: 12px;
     }
 
     .wpmonique-relatedsingle li img {

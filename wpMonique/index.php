@@ -38,7 +38,11 @@
                 } else {
                     if(!is_single()) {
                         echo '<header id="content-header">';
-                        echo '<h1>Latest Posts</h1>';
+                            if($cLang == 'no') {
+                                echo '<h1>Blogginnlegg</h1>';
+                            } else {
+                                echo '<h1>Blog Posts</h1>';
+                            }
                         echo '</header>';
                     }
                 }

@@ -21,7 +21,6 @@
             register_nav_menus(array(
                 "primary" => __("Left Menu","wpMonique"),
                 "footer"  => __("Footer Menu","wpMonique"),
-                "mobile"  => __("Mobile Menu","wpMonique"),
             ));
 
             /* Enable support for Post Formats */
@@ -270,10 +269,10 @@
     function fPostViews($iID) {
 
         $iCount = fGetPostViews($iID);
-        if($iCount > 999) {
-            $dCount = round($iCount / 1000, 1);
-            return number_format($dCount,1,'.',' ').'k';
-        }
+        // if($iCount > 999) {
+        //     $dCount = round($iCount / 1000, 1);
+        //     return number_format($dCount,1,'.',' ').'k';
+        // }
 
         return number_format($iCount,0,'.',' ');
     }

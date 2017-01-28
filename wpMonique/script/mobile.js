@@ -19,7 +19,7 @@ $(document).ready(function(){
     function openme() {
         $(function () {
             topbar.animate({
-               left: "300px"
+               left: "301px"
             }, { duration: 300, queue: false });
             themenu.animate({
                left: "0px"
@@ -42,7 +42,7 @@ $(document).ready(function(){
                 left: "0px"
             }, { duration: 180, queue: false });
             themenu.animate({
-                left: "-300px"
+                left: "-301px"
             }, { duration: 180, queue: false });
             // pagebody.animate({
             //     left: "0px"
