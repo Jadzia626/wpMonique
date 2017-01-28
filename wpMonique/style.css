@@ -39,13 +39,17 @@
 html {
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
+    /*background-image: url('theme-files/boxes.png');*/
+    /*background-position: bottom left;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
 }
 
 body {
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: #f7f7f7;
     color: #202020;
     font-size: 15px;
     font-family: 'Roboto', Arial, sans-serif;
@@ -74,7 +78,7 @@ body {
 
 #content {
     width: 816px;
-    min-height: 816px;
+    /*min-height: 816px;*/
     margin: 0 0 0 300px;
     z-index: 0;
     display: inline-block;
@@ -339,6 +343,12 @@ a:hover {color: #c80000; text-decoration: underline;}
     margin: 16px 0 8px 0;
 }
 
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    color: #940000;
+}
+
 .entry-feature {
     margin: 0;
     overflow: hidden;
@@ -418,7 +428,7 @@ a:hover {color: #c80000; text-decoration: underline;}
 
 .entry-content .alignleft {
     float: left;
-    margin: 0 0 4px 0;
+    margin: 0 10px 4px 0;
 }
 
 .entry-content .alignright {

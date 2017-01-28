@@ -58,17 +58,13 @@
     </script>
     <div id="site-content">
         <div class="entry-loop">
-            <header id="content-header">
-                <?php the_title('<h1>','</h1>'); ?>
-            </header>
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php
-                // if (have_posts()) {
-                //     while (have_posts()) {
-                //         the_post();
-                //         get_template_part('content','page');
-                //     }
-                // }
+                if (have_posts()) {
+                    while (have_posts()) {
+                        the_post();
+                        get_template_part('content','page');
+                    }
+                }
 
                 $sPrev = "";
                 while($aRow = $RS1->fetch_assoc()) {
@@ -119,7 +115,6 @@
                     echo '</div>';
                 }
             ?>
-            </article>
         </div>
     </div>
     <!-- End Site Content -->
