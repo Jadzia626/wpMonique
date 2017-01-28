@@ -8,16 +8,23 @@
     */
 
     global $cLang;
+
+    $dirTheme = esc_url(get_template_directory_uri());
 ?>
 
 <!-- Begin No Content Template (404) -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="page-header">
-        <h1 class="page-title">Error 404</h1>
+    <header id="content-header">
+        <h1>Error</h1>
     </header>
 
+    <div class="entry-feature-page">
+            <img src="<?php echo $dirTheme; ?>/theme-files/white-noise.gif">
+    </div>
+
     <div class="entry-content">
+        <h1>404 – Page not found</h1>
         <?php
             if(is_search()) {
                 if($cLang == 'no') {
@@ -34,8 +41,6 @@
             }
 
             get_search_form();
-
-            echo '<p><img class="size-full" src="'.esc_url(get_template_directory_uri()).'/theme-files/404_moss_fire.gif"></p>';
         ?>
     </div>
 </article>

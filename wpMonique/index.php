@@ -17,39 +17,43 @@
     <!-- Begin Site Content -->
     <div id="site-content">
         <div class="entry-loop">
-            <?php
-                // WP-Loop
+        <?php
+            if(have_posts()) {
 
-                if(have_posts()) {
-
-                    if(is_search()) {
-                        echo '<header id="content-header">';
-                            if($cLang == 'no') {
-                                echo 'Søkeresultat';
-                            } else {
-                                echo 'Search Result';
-                            }
-                            echo '<h1 class="page-title">'.get_search_query().'</h1>';
-                        echo '</header>';
-                    } else {
-                        if(!is_single()) {
-                            echo '<header id="content-header">';
-                            echo '<h1>Latest Posts</h1>';
-                            echo '</header>';
+                if(is_search()) {
+                    echo '<header id="content-header">';
+                        if($cLang == 'no') {
+                            echo '<h1>Søkeresultat</hi>';
+                        } else {
+                            echo '<h1>Search Result</h1>';
                         }
-                    }
-
-                    echo '<div class="entry-outer">';
-                        while (have_posts()) {
-                            the_post();
-                            get_template_part('content',get_post_format());
+                    echo '</header>';
+                    echo '<div class="entry-content">';
+                        if($cLang == 'no') {
+                            echo '<h2>Søker etter: "'.get_search_query().'"</h2>';
+                        } else {
+                            echo '<h2>Searching for: "'.get_search_query().'"</h2>';
                         }
                     echo '</div>';
-                    the_posts_pagination(array('mid_size' => 2));
                 } else {
-                    get_template_part('content','none');
+                    if(!is_single()) {
+                        echo '<header id="content-header">';
+                        echo '<h1>Latest Posts</h1>';
+                        echo '</header>';
+                    }
                 }
-            ?>
+
+                echo '<div class="entry-outer">';
+                    while (have_posts()) {
+                        the_post();
+                        get_template_part('content',get_post_format());
+                    }
+                echo '</div>';
+                the_posts_pagination(array('mid_size' => 2));
+            } else {
+                get_template_part('content','none');
+            }
+        ?>
         </div>
     </div>
     <!-- End Site Content -->

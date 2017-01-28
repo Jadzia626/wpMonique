@@ -26,6 +26,7 @@
  *  8. Other Styles
  *     8.1 Images
  *     8.2 Embeds
+ *  9. Mobile
  */
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -391,6 +392,22 @@ a:hover {color: #c80000; text-decoration: underline;}
     width: 700px;
     margin-left: 58px;
     color: #707070;
+}
+
+.entry-footer {
+    text-align: right;
+}
+
+/* Page Specific */
+
+.entry-feature-page {
+    border-radius: 0;
+    width: 700px;
+    margin-left: 58px;
+}
+
+.entry-feature-page span.feature-caption {
+    margin: 8px 0;
 }
 
 /* Alignment */

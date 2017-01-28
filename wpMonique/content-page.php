@@ -15,6 +15,15 @@
     <?php the_title('<h1>','</h1>'); ?>
 </header>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="entry-feature-page">
+    <?php
+        if(has_post_thumbnail()) the_post_thumbnail(array(700));
+        $sFCaption = get_post(get_post_thumbnail_id())->post_excerpt;
+        if(!empty($sFCaption)) {
+            echo '<span class="feature-caption">'.$sFCaption.'</span>';
+        }
+    ?>
+    </div>
     <div class="entry-content">
         <?php
             the_content();
