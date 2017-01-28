@@ -48,7 +48,7 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 50px 0;
     position: relative;
     color: #202020;
     font-size: 15px;
@@ -63,7 +63,7 @@ body {
 }
 
 #site-wrapper {
-    margin: 50px auto;
+    margin: 0 auto;
     width: 1158px;
 }
 
@@ -978,6 +978,10 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 @media screen and (max-width: 818px) {
+
+    body {
+        padding: 0;
+    }
 
     h1 {font-size: 1.80em;}
     h2 {font-size: 1.60em;}
