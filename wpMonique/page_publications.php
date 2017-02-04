@@ -105,6 +105,19 @@
                     echo '</div>';
                 }
             ?>
+            <?php if (have_posts()) { ?>
+                <div class="entry-footer">
+                    <?php if($cLang == 'no') { ?>
+                        Oppdatert den <?php the_modified_date('j. F Y'); ?>
+                        &bull;
+                        <?php echo fPostViews(get_the_ID()); ?> visninger
+                    <?php } else { ?>
+                        Updated on <?php the_modified_date('F j, Y'); ?>
+                        &bull;
+                        <?php echo fPostViews(get_the_ID()); ?> views
+                    <?php } ?>
+                </div>
+            <?php } ?>
         </div>
     </div>
     <!-- End Site Content -->
