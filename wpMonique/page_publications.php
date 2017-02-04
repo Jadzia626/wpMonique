@@ -1,6 +1,6 @@
 <?php
    /**
-   * Template Name: Publications Page
+    * Template Name: Publications Page
     *
     * @package WordPress
     * @subpackage wpMonique
@@ -38,7 +38,8 @@
         "Talk"        => false,
     );
 
-    $dirTheme = esc_url(get_template_directory_uri());
+    $dirTheme  = esc_url(get_template_directory_uri());
+    $dirBibTeX = "http://stuff.vkbo.net/scripts/bibtex/";
 
     get_header();
 ?>
@@ -46,16 +47,6 @@
     <!-- Publications Page Template -->
 
     <!-- Begin Site Content -->
-    <script>
-        function toggleBibTeX(elementID) {
-            var textArea = document.getElementById(elementID).style.display;
-            if(textArea == "block") {
-                document.getElementById(elementID).style.display = "none";
-            } else {
-                document.getElementById(elementID).style.display = "block";
-            }
-        }
-    </script>
     <div id="site-content">
         <div class="entry-loop">
             <?php
@@ -107,11 +98,10 @@
                             if($aRow["BibTeX"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_tex.png" height="16px">';
-                                    echo '<a onClick="toggleBibTeX('.chr(39).'bibtex-'.$aRow["ID"].chr(39).')">BibTeX</a>';
+                                    echo '<a href="'.$dirBibTeX.'getbibtex.php?S=Pub&ID='.$aRow["ID"].'")">BibTeX</a>';
                                 echo '</span>';
                             }
                         echo "</div>";
-                        echo '<textarea id="bibtex-'.$aRow["ID"].'" style="display: none;" readOnly=1>'.$aRow["BibTeX"].'</textarea>';
                     echo '</div>';
                 }
             ?>
