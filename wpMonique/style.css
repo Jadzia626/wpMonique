@@ -39,7 +39,7 @@
 html {
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: #f0f0f0;
     /*background-image: url('theme-files/boxes.png');*/
     /*background-position: bottom left;*/
     /*background-repeat: no-repeat;*/
@@ -55,10 +55,10 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 400;
     min-width: 320px;
-    background: -webkit-linear-gradient(#f7f7f7, #e7e7e7); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#f7f7f7, #e7e7e7);      /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#f7f7f7, #e7e7e7);    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#f7f7f7, #e7e7e7);         /* Standard syntax */
+    background: -webkit-linear-gradient(#f0f0f0, #e0d9d9); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f0f0f0, #e0d9d9);      /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f0f0f0, #e0d9d9);    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#f0f0f0, #e0d9d9);         /* Standard syntax */
     background-attachment: fixed;
 }
 
@@ -86,9 +86,9 @@ body {
     background-color: #ffffff;
     border: 1px solid #d0d0d0;
     border-radius: 29px;
-    box-shadow: 0px 0px 10px 2px #d0d0d0;
-    -moz-box-shadow: 0px 0px 10px 2px #d0d0d0;
-    -webkit-box-shadow: 0px 0px 10px 2px #d0d0d0;
+    box-shadow: 0px 0px 10px 2px #d0cbcb;
+    -moz-box-shadow: 0px 0px 10px 2px #d0cbcb;
+    -webkit-box-shadow: 0px 0px 10px 2px #d0cbcb;
 }
 
 #footer {
@@ -493,6 +493,10 @@ a:hover {color: #c80000; text-decoration: underline;}
 .entry-content .backwards {
     unicode-bidi: bidi-override;
     direction: rtl;
+}
+
+.entry-content .help {
+    border-bottom: 1px dashed #c80000;
 }
 
 /* Pagination */
