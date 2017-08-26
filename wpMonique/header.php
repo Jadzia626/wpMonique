@@ -54,7 +54,7 @@
         <a href="https://www.youtube.com/channel/UCAQa9ttyKweOmB_shzNwfpQ" title="YouTube"><img src="<?php echo $dirTheme."/theme-files/icon_youtube.png"; ?>"></a>
         <a href="https://linkedin.com/in/veronicakbolsen" title="LinekdIn"><img src="<?php echo $dirTheme."/theme-files/icon_linkedin.png"; ?>"></a>
         <a href="https://www.goodreads.com/user/show/46372019-veronica-olsen" title="GoodReads"><img src="<?php echo $dirTheme."/theme-files/icon_goodreads.png"; ?>"></a>
-        <a href="https://github.com/Jadzia626" title="GitHub"><img src="<?php echo $dirTheme."/theme-files/icon_github.png"; ?>"></a>
+        <a href="https://github.com/vkbo" title="GitHub"><img src="<?php echo $dirTheme."/theme-files/icon_github.png"; ?>"></a>
     </div>
     <div id="side-footer">
         <?php if($cLang == 'no') { ?>
