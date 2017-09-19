@@ -40,10 +40,12 @@ html {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    background-image: url('theme-files/background-detailed.jpg');
     /*background-image: url('theme-files/boxes.png');*/
-    /*background-position: bottom left;*/
-    /*background-repeat: no-repeat;*/
-    /*background-attachment: fixed;*/
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 body {
@@ -55,11 +57,11 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     font-weight: 400;
     min-width: 320px;
-    background: -webkit-linear-gradient(#f0f0f0, #e0d9d9); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#f0f0f0, #e0d9d9);      /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#f0f0f0, #e0d9d9);    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#f0f0f0, #e0d9d9);         /* Standard syntax */
-    background-attachment: fixed;
+    /*background: -webkit-linear-gradient(#f0f0f0, #e0d9d9); /* For Safari 5.1 to 6.0 */
+    /*background: -o-linear-gradient(#f0f0f0, #e0d9d9);      /* For Opera 11.1 to 12.0 */
+    /*background: -moz-linear-gradient(#f0f0f0, #e0d9d9);    /* For Firefox 3.6 to 15 */
+    /*background: linear-gradient(#f0f0f0, #e0d9d9);         /* Standard syntax */
+    /*background-attachment: fixed;*/
 }
 
 #site-wrapper {
@@ -144,7 +146,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     justify-content: space-around;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  2. Sidebar
@@ -174,16 +176,16 @@ a:hover {color: #c80000; text-decoration: underline;}
     text-align: center;
     margin: 40px;
     font-size: 0.8em;
-    color: #606060;
+    color: #404040;
 }
 
 #side-footer a {
-    color: #606060;
+    color: #404040;
     text-decoration: none;
 }
 
 #side-footer a:hover {
-    color: #606060;
+    color: #404040;
     text-decoration: underline;
 }
 
@@ -202,7 +204,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     margin: 0;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  3. Navigation
@@ -233,15 +235,15 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 .main-navigation a {
-    color: #606060;
+    color: #404040;
     text-decoration: none;
 }
 
 .main-navigation a:hover {
-    color: #606060;
+    color: #404040;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  4. Site Content
@@ -604,7 +606,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     text-decoration: underline;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  5. Page Templates
@@ -665,7 +667,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     white-space: pre;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  6. Comments
@@ -833,7 +835,7 @@ a:hover {color: #c80000; text-decoration: underline;}
     width: 150px;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  7. Site Footer
@@ -842,7 +844,7 @@ a:hover {color: #c80000; text-decoration: underline;}
 
 #site-footer {
     display: table;
-    color: #606060;
+    color: #404040;
     width: 100%;
 }
 
@@ -889,16 +891,16 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 .footer-menu a {
-    color: #606060;
+    color: #404040;
     text-decoration: none;
 }
 
 .footer-menu a:hover {
-    color: #606060;
+    color: #404040;
     text-decoration: underline;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /**
  *  8. Other Styles
@@ -982,6 +984,10 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 @media screen and (max-width: 818px) {
+
+    html {
+        background-image: none;
+    }
 
     body {
         padding: 0;
