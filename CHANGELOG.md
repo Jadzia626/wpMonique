@@ -1,5 +1,14 @@
 ## wpMonique ChangeLog
 
+### Version 1.0.3
+
+* Rewritten publication template. It now reads from a php array instead of a database.
+
+### Version 1.0.2
+
+* Changed background from gradient to simple wallpaper.
+* Changed text colour on background from `#606060` to `#404040`.
+
 ### Version 1.0.1
 
 * Added missing mobile layout rules for page_publications template.
