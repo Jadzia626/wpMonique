@@ -6,41 +6,7 @@
     * @subpackage wpMonique
     * @since wpMonique 0.1
     */
-
-    global $cDBUser;
-    global $cDBPass;
-    global $cDBHost;
-    global $cDBData;
-
-    $oDB1 = new mysqli($cDBHost,$cDBUser,$cDBPass,$cDBData);
-    $oDB1->set_charset("utf8");
-
-    $SQL  = "SELECT * ";
-    $SQL .= "FROM publications ";
-    $SQL .= "ORDER BY Date DESC";
-    $RS1  = $oDB1->query($SQL);
-
-    $aTypeTranslate = array(
-        "Book"        => "Book",
-        "Paper"       => "Journal Article",
-        "Thesis"      => "Thesis",
-        "Proceedings" => "Proceedings",
-        "Report"      => "Report",
-        "Talk"        => "Conference Talk",
-    );
-
-    $aPublication = array(
-        "Book"        => true,
-        "Paper"       => true,
-        "Thesis"      => true,
-        "Proceedings" => true,
-        "Report"      => true,
-        "Talk"        => false,
-    );
-
-    $dirTheme  = esc_url(get_template_directory_uri());
-    $dirBibTeX = "http://stuff.vkbo.net/scripts/bibtex/";
-
+    
     get_header();
 ?>
 
@@ -57,50 +23,60 @@
                     }
                 }
 
+                include_once(getcwd()."/publications/publications.php");
+                $dirTheme = esc_url(get_template_directory_uri());
+
+                $aTypeTranslate = array(
+                    "Book"        => "Book",
+                    "Article"     => "Journal Article",
+                    "Thesis"      => "Thesis",
+                    "Proceedings" => "Proceedings",
+                    "Report"      => "Report",
+                    "Talk"        => "Conference Talk",
+                );
+
                 $sPrev = "";
-                while($aRow = $RS1->fetch_assoc()) {
+                foreach($pubEntries as $bibTex=>$pubEntry) {
                     echo '<div class="publication-entry">';
-                        $sYear = date("Y",strtotime($aRow["Date"]));
-                        $sDate = date("M j, Y",strtotime($aRow["Date"]));
+                        $sYear = date("Y",strtotime($pubEntry["Date"]));
+                        $sDate = date("M j, Y",strtotime($pubEntry["Date"]));
                         if($sYear != $sPrev) {
                             echo '<h2>'.$sYear.'</h2>';
                             $sPrev = $sYear;
                         }
-                        echo '<div class="publication-type">'.$aTypeTranslate[$aRow["Type"]].'</div>';
-                        echo '<div class="publication-title"><a href="'.$aRow["URL"].'">'.$aRow["Title"].'</a></div>';
-                        echo '<div class="publication-journal">'.$sDate.' &ndash; '.$aRow["Journal"].'</div>';
-                        echo '<div class="publication-details"><b>Authors:</b> '.$aRow["Authors"].'</div>';
+                        echo '<div class="publication-type">'.$aTypeTranslate[$pubEntry["Type"]].'</div>';
+                        echo '<div class="publication-title"><a href="'.$pubEntry["URL"].'">'.$pubEntry["Title"].'</a></div>';
+                        echo '<div class="publication-journal">'.$sDate.' &ndash; '.$pubEntry["Journal"].'</div>';
+                        echo '<div class="publication-details"><b>Authors:</b> '.$pubEntry["Authors"].'</div>';
                         echo '<div class="publication-meta">';
-                            if($aRow["Slides"] != "") {
+                            if($pubEntry["Slides"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_slides.png" height="16px">';
-                                    echo '<a href="'.$aRow["Slides"].'">Slides</a>';
+                                    echo '<a href="'.$pubEntry["Slides"].'">Slides</a>';
                                 echo '</span>';
                             }
-                            if($aRow["PrePrint"] != "") {
+                            if($pubEntry["PrePrint"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_pdf.png" height="16px">';
-                                    echo '<a href="'.$aRow["PrePrint"].'">PrePrint</a>';
+                                    echo '<a href="'.$pubEntry["PrePrint"].'">PrePrint</a>';
                                 echo '</span>';
                             }
-                            if($aRow["PDF"] != "") {
+                            if($pubEntry["PDF"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_pdf.png" height="16px">';
-                                    echo '<a href="'.$aRow["PDF"].'">PDF</a>';
+                                    echo '<a href="'.$pubEntry["PDF"].'">PDF</a>';
                                 echo '</span>';
                             }
-                            if($aRow["DOI"] != "") {
+                            if($pubEntry["DOI"] != "") {
                                 echo '<span>';
                                     echo '<img src="'.$dirTheme.'/theme-files/icon_doi.png" height="16px">';
-                                    echo '<a href="http://dx.doi.org/'.$aRow["DOI"].'">'.$aRow["DOI"].'</a>';
+                                    echo '<a href="http://dx.doi.org/'.$pubEntry["DOI"].'">'.$pubEntry["DOI"].'</a>';
                                 echo '</span>';
                             }
-                            if($aRow["BibTeX"] != "") {
-                                echo '<span>';
-                                    echo '<img src="'.$dirTheme.'/theme-files/icon_tex.png" height="16px">';
-                                    echo '<a href="'.$dirBibTeX.'getbibtex.php?S=Pub&ID='.$aRow["ID"].'")">BibTeX</a>';
-                                echo '</span>';
-                            }
+                            echo '<span>';
+                                echo '<img src="'.$dirTheme.'/theme-files/icon_tex.png" height="16px">';
+                                echo '<a href="/publications/getbibtex.php?Key='.$bibTex.'")">BibTeX</a>';
+                            echo '</span>';
                         echo "</div>";
                     echo '</div>';
                 }
