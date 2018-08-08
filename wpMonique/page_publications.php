@@ -34,6 +34,11 @@
                     "Report"      => "Report",
                     "Talk"        => "Conference Talk",
                 );
+                $aContrib = array(
+                    1 => "Main Author",
+                    2 => "Contributing Author",
+                    3 => "Co-author"
+                );
 
                 $sPrev = "";
                 foreach($pubEntries as $bibTex=>$pubEntry) {
@@ -44,7 +49,7 @@
                             echo '<h2>'.$sYear.'</h2>';
                             $sPrev = $sYear;
                         }
-                        echo '<div class="publication-type">'.$aTypeTranslate[$pubEntry["Type"]].'</div>';
+                        echo '<div class="publication-type">'.$aTypeTranslate[$pubEntry["Type"]].' &ndash; '.$aContrib[$pubEntry["Contrib"]].'</div>';
                         echo '<div class="publication-title"><a href="'.$pubEntry["URL"].'">'.$pubEntry["Title"].'</a></div>';
                         echo '<div class="publication-journal">'.$sDate.' &ndash; '.$pubEntry["Journal"].'</div>';
                         echo '<div class="publication-details"><b>Authors:</b> '.$pubEntry["Authors"].'</div>';

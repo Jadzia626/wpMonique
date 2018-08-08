@@ -50,7 +50,7 @@
     </div>
     <div id="so-me">
         <a href="https://twitter.com/VeronicaInPink" title="Twitter"><img src="<?php echo $dirTheme."/theme-files/icon_twitter.png"; ?>"></a>
-        <a href="https://www.facebook.com/veronicakbolsen" title="Facebook"><img src="<?php echo $dirTheme."/theme-files/icon_facebook.png"; ?>"></a>
+        <a href="https://www.facebook.com/vkbolsen" title="Facebook"><img src="<?php echo $dirTheme."/theme-files/icon_facebook.png"; ?>"></a>
         <a href="https://www.youtube.com/channel/UCAQa9ttyKweOmB_shzNwfpQ" title="YouTube"><img src="<?php echo $dirTheme."/theme-files/icon_youtube.png"; ?>"></a>
         <a href="https://linkedin.com/in/veronicakbolsen" title="LinekdIn"><img src="<?php echo $dirTheme."/theme-files/icon_linkedin.png"; ?>"></a>
         <a href="https://www.goodreads.com/user/show/46372019-veronica-olsen" title="GoodReads"><img src="<?php echo $dirTheme."/theme-files/icon_goodreads.png"; ?>"></a>
