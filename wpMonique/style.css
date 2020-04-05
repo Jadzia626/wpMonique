@@ -4,7 +4,7 @@
     Author: Veronica Berglyd Olsen
     Author URI: http://vkbo.net/
     Description: Standard theme for vkbo.net
-    Version: 1.0.3
+    Version: 1.0.4
     License: Copyright Veronica K. Berglyd Olsen
 */
 
@@ -527,6 +527,16 @@ a:hover {color: #c80000; text-decoration: underline;}
     text-decoration: none;
 }
 
+p.has-drop-cap:not(:focus):first-letter {
+    float:left;
+    font-size: 4.4em;
+    line-height: 0.9;
+    font-weight: 100;
+    margin: 0.05em 0.1em 0 0;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
 /**
  *  4.3 Entry Extras
  * ==================
@@ -686,7 +696,6 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 .comment-list li {
-    #padding: 5px;
     margin-bottom: 20px;
 }
 
@@ -698,7 +707,6 @@ a:hover {color: #c80000; text-decoration: underline;}
 }
 
 .comment-list .children li {
-    #padding: 5px;
     margin-bottom: 20px;
 }
 

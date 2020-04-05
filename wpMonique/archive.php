@@ -7,7 +7,7 @@
      * @since wpMonique 0.1
      */
 
-     global $cLang;
+    global $cLang;
 
     if($cLang == 'no') {
         $sArchive  = 'Arkiv';

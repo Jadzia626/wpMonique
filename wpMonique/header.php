@@ -49,9 +49,8 @@
         </nav>
     </div>
     <div id="so-me">
-        <a href="https://twitter.com/VeronicaInPink" title="Twitter"><img src="<?php echo $dirTheme."/theme-files/icon_twitter.png"; ?>"></a>
+        <a href="https://twitter.com/DrBerglyd" title="Twitter"><img src="<?php echo $dirTheme."/theme-files/icon_twitter.png"; ?>"></a>
         <a href="https://www.facebook.com/vkbolsen" title="Facebook"><img src="<?php echo $dirTheme."/theme-files/icon_facebook.png"; ?>"></a>
-        <a href="https://www.youtube.com/channel/UCAQa9ttyKweOmB_shzNwfpQ" title="YouTube"><img src="<?php echo $dirTheme."/theme-files/icon_youtube.png"; ?>"></a>
         <a href="https://linkedin.com/in/veronicakbolsen" title="LinekdIn"><img src="<?php echo $dirTheme."/theme-files/icon_linkedin.png"; ?>"></a>
         <a href="https://www.goodreads.com/user/show/46372019-veronica-olsen" title="GoodReads"><img src="<?php echo $dirTheme."/theme-files/icon_goodreads.png"; ?>"></a>
         <a href="https://github.com/vkbo" title="GitHub"><img src="<?php echo $dirTheme."/theme-files/icon_github.png"; ?>"></a>
@@ -59,13 +58,13 @@
     <div id="side-footer">
         <?php if($cLang == 'no') { ?>
             &copy;<?php echo $cStart."&ndash;".date("Y",time()); ?> <?php echo $cCopy; ?><br>
-            Photo by Amy Davis Roth &copy;2014<br>
-            Wordpress tema <a href="https://github.com/Jadzia626/wpMonique">wpMonique</a><br>
+            Foto ved Amy Davis Roth &copy;2014<br>
+            Wordpress-tema <a href="https://github.com/vkbo/wpMonique">wpMonique</a><br>
             Drevet med <a href="http://wordpress.org">Wordpress</a><br>
         <?php } else { ?>
             &copy;<?php echo $cStart."&ndash;".date("Y",time()); ?> <?php echo $cCopy; ?><br>
             Photo by Amy Davis Roth &copy;2014<br>
-            Wordpress theme <a href="https://github.com/Jadzia626/wpMonique">wpMonique</a><br>
+            Wordpress theme <a href="https://github.com/vkbo/wpMonique">wpMonique</a><br>
             Powered by <a href="http://wordpress.org">Wordpress</a><br>
         <?php } ?>
     </div>

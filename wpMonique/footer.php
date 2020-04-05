@@ -23,7 +23,7 @@
                 <?php echo $sBlobText; ?>
             </div>
             <div class="footer-right">
-                <h2><?php echo '&nbsp;'//($cLang == 'no' ? 'Se også' : 'See also'); ?></h2>
+                <h2><?php echo "&nbsp;" ?></h2>
                 <?php wp_nav_menu(array("theme_location"=>"footer","menu_class"=>"footer-menu")); ?>
             </div>
         </div>
