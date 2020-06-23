@@ -5,7 +5,7 @@
  *
  */
 
-$(document).ready(function(){
+jQuery(document).ready(function($){
     var pagebody = $("#mobile-top");
     var themenu  = $("#sidebar");
     var topbar   = $("#mobile-top");
