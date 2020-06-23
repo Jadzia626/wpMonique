@@ -28,8 +28,8 @@
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>" type="text/css" media="all">
     <link rel="pingback" href="<?php bloginfo("pingback_url"); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <script type="text/javascript" src="<?php echo $dirTheme; ?>/script/mobile.js"></script>
     <?php wp_head(); ?>
+    <script type="text/javascript" src="<?php echo $dirTheme; ?>/script/mobile.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

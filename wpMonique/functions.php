@@ -11,15 +11,6 @@
     require_once('theme-config.php');
     require_once('common-functions.php');
 
-    // Completely Remove jQuery From WordPress
-    function moniqueInit() {
-        if (!is_admin()) {
-            wp_deregister_script('jquery');
-            wp_register_script('jquery', false);
-        }
-    }
-    add_action('init', 'moniqueInit');
-
     if (!function_exists('wpMoniqueSetup')) {
 
         function wpMoniqueSetup() {
